@@ -36,7 +36,7 @@ for (let i = 1; i <= 100; i++) {
     // SE il numero esaminato è divisibile per 3 e 5 senza resto viene asseganta la classe bothzz alla cella
     if ((i % 3 === 0) && (i % 5 === 0)) {
         fizzBuzz = "ms_bothzz";
-        textContent = "FizzBuzz";
+        textContent = "Fizz<br>Buzz";
     } else if (i % 3 === 0) {
         // SE il numero esaminato è divisibile per 3 senza resto viene assegnata la classe fizz alla cella
         fizzBuzz = "ms_fizz";
@@ -62,9 +62,10 @@ for (let i = 1; i <= 100; i++) {
     
     if (fizzBuzz !== "") {
         cell.classList.add(fizzBuzz);
+        cell.innerHTML = `<i class="fa-regular fa-star"></i>`
     }
 
-    cell.innerHTML = textContent;
+    cell.innerHTML += `<span>${textContent}</span>`;
     console.log(cell);
     
     finalGrid.append(cell);
