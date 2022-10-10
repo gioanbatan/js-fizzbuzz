@@ -31,25 +31,43 @@ const finalGrid = document.querySelector(".ms_grid");
 for (let i = 1; i <= 100; i++) {
     // Variabile che conterrà la classe per una cella speciale
     let fizzBuzz = "";
+    let textContent = "";
     // Per ogni numero del ciclo viene creata un div 'cella' numerata
     // SE il numero esaminato è divisibile per 3 e 5 senza resto viene asseganta la classe bothzz alla cella
     if ((i % 3 === 0) && (i % 5 === 0)) {
-        fizzBuzz = "ms_bothzz"
+        fizzBuzz = "ms_bothzz";
+        textContent = "FizzBuzz";
     } else if (i % 3 === 0) {
         // SE il numero esaminato è divisibile per 3 senza resto viene assegnata la classe fizz alla cella
-        fizzBuzz = "ms_fizz"
+        fizzBuzz = "ms_fizz";
+        textContent = "Fizz";
     } else if (i % 5 === 0) {
         // SE il numero esaminato è divisibile per 5 senza resto viene assegnata la classe buzz alla cella
-        fizzBuzz = "ms_buzz"
+        fizzBuzz = "ms_buzz";
+        textContent = "Buzz";
+    } else {
+        textContent = i;
     }
-    console.log (i, fizzBuzz)
+    console.log (i, fizzBuzz);
 
-    // Comporre il div cella
-    finalGrid.innerHTML += `<div class="ms_cell ${fizzBuzz}">${i}</div>`
+    // OUTPUT
+    // Viene composta serie di celle nell'html
+    
+    // Versione con stringa in innerHTML
+    // finalGrid.innerHTML += `<div class="ms_cell ${fizzBuzz}">${textContent}</div>`
+
+    // Versione con append
+    const cell = document.createElement("div");
+    cell.classList.add("ms_cell");
+    
+    if (fizzBuzz !== "") {
+        cell.classList.add(fizzBuzz);
+    }
+
+    cell.innerHTML = textContent;
+    console.log(cell);
+    
+    finalGrid.append(cell);
     // Il ciclo termina superato 100
 }
 
-
-
-// OUTPUT
-// Viene composta serie di celle nell'html
