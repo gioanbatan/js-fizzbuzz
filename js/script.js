@@ -65,9 +65,15 @@ for (let i = 1; i <= 100; i++) {
         cell.innerHTML = `<i class="fa-regular fa-star"></i>`
     }
 
-    cell.innerHTML += `<span>${textContent}</span>`;
+    if (isNaN(parseInt(textContent))) {
+        cell.innerHTML += `<span class="special">${textContent}</span>`;
+    } else {
+        cell.innerHTML += `<span>${textContent}</span>`;
+    }
+
     console.log(cell);
     
+    // OUTPUT
     finalGrid.append(cell);
     // Il ciclo termina superato 100
 }
