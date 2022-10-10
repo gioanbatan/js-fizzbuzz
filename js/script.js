@@ -60,11 +60,13 @@ for (let i = 1; i <= 100; i++) {
     const cell = document.createElement("div");
     cell.classList.add("ms_cell");
     
+    // Aggiunta della stella
     if (fizzBuzz !== "") {
         cell.classList.add(fizzBuzz);
         cell.innerHTML = `<i class="fa-regular fa-star"></i>`
     }
 
+    // Aggiunta della classe "special" allo span per animare solo i FizzBuzz e di span semplici per i numeri
     if (isNaN(parseInt(textContent))) {
         cell.innerHTML += `<span class="special">${textContent}</span>`;
     } else {
