@@ -8,10 +8,11 @@
 /* COMMON */
 html {
     font-size: 100%;
-    background-color: grey ;
+    background-color: #444444 ;
 }
 
 h1 {
+    color: #ffffff;
     text-align: center;
     padding: 2rem;
 }
@@ -24,6 +25,7 @@ h1 {
 .ms_grid {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* MAIN */
@@ -31,9 +33,23 @@ h1 {
     width: calc((100% / 6) - 1rem);
     height: calc((80vw / 6) - 1rem);
 
-    /* DEBUG */
-    background-color: blueviolet;
+    margin: 0.5rem;
+    background-color: #888888;
     border:1px solid black;
     border-radius: 10px;
+
+    /* DEBUG */
+    padding: 0.3rem;
 }
 
+.ms_cell.ms_bothzz {
+    background-color: #ffffff;
+}
+
+.ms_cell.ms_fizz {
+    background-color: #ffff00;
+}
+
+.ms_cell.ms_buzz {
+    background-color: #00ff00;
+}

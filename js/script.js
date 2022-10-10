@@ -42,10 +42,13 @@ for (let i = 1; i <= 100; i++) {
         // SE il numero esaminato è divisibile per 5 senza resto viene assegnata la classe buzz alla cella
         fizzBuzz = "ms_buzz"
     }
-
     console.log (i, fizzBuzz)
+
+    // Comporre il div cella
+    finalGrid.innerHTML += `<div class="ms_cell ${fizzBuzz}">${i}</div>`
     // Il ciclo termina superato 100
 }
+
 
 
 // OUTPUT
