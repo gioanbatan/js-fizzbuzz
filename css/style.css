@@ -7,5 +7,33 @@
 
 /* COMMON */
 html {
+    font-size: 100%;
     background-color: grey ;
 }
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.ms_main-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ms_grid {
+    width: 100%;
+    display: flex;
+}
+
+/* MAIN */
+.ms_cell {
+    width: calc((100% / 6) - 1rem);
+    height: calc((80vw / 6) - 1rem);
+
+    /* DEBUG */
+    background-color: blueviolet;
+    border:1px solid black;
+    border-radius: 10px;
+}
+

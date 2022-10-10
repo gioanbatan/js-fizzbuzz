@@ -17,20 +17,36 @@
 //  Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 // Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 
+// 
+
+// VARIABILI
+
+// Elementi di Output
+const finalGrid = document.querySelector(".ms_grid");
+
 // INPUT
 
 // ELABORAZIONE
 // Ciclo che scorre i numeri da 1 a 100
+for (let i = 1; i <= 100; i++) {
+    // Variabile che conterrà la classe per una cella speciale
+    let fizzBuzz = "";
+    // Per ogni numero del ciclo viene creata un div 'cella' numerata
+    // SE il numero esaminato è divisibile per 3 e 5 senza resto viene asseganta la classe bothzz alla cella
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+        fizzBuzz = "ms_bothzz"
+    } else if (i % 3 === 0) {
+        // SE il numero esaminato è divisibile per 3 senza resto viene assegnata la classe fizz alla cella
+        fizzBuzz = "ms_fizz"
+    } else if (i % 5 === 0) {
+        // SE il numero esaminato è divisibile per 5 senza resto viene assegnata la classe buzz alla cella
+        fizzBuzz = "ms_buzz"
+    }
 
-// Per ogni numero del ciclo viene creata un div 'cella' numerata
+    console.log (i, fizzBuzz)
+    // Il ciclo termina superato 100
+}
 
-// SE il numero esaminato è divisibile per 3 senza resto viene assegnata la classe fizz alla cella
-
-// SE il numero esaminato è divisibile per 5 senza resto viene assegnata la classe buzz alla cella
-
-// SE il numero esaminato è divisibile per 3 e 5 senza resto viene asseganta la classe bothzz alla cella
-
-// Il ciclo termina superato 100
 
 // OUTPUT
 // Viene composta serie di celle nell'html
