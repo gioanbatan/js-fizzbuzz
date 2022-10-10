@@ -78,5 +78,16 @@ for (let i = 1; i <= 100; i++) {
     // OUTPUT
     finalGrid.append(cell);
     // Il ciclo termina superato 100
-}
+};
+
+// Easter Egg
+// INPUT
+const easterEgg = document.querySelector(".ms_easter-egg i");
+const captainFizz = document.querySelector(".ms_captain-fizz");
+
+// ELABORAZIONE
+// Event listener
+easterEgg.addEventListener("click", function() {
+    captainFizz.classList.toggle("hidden");
+});
 

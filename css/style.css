@@ -22,6 +22,7 @@ h1 {
 .ms_main-container {
     width: 80%;
     margin: 0 auto;
+    padding: 1rem 0;
 }
 
 .ms_grid {
@@ -30,7 +31,12 @@ h1 {
     flex-wrap: wrap;
 }
 
+.hidden {
+    display: none;
+}
+
 /* MAIN */
+
 .ms_cell {
     display: flex;
     justify-content: center;
@@ -65,12 +71,12 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     font-size: 4rem;
     color: #ffffff80;
-
+    
     z-index: 2;
-
+    
     animation-name: star-anim;
     animation-duration: 5s;
     animation-timing-function: linear;
@@ -79,30 +85,49 @@ h1 {
 
 .ms_cell span.special {
     transform: rotate(-45deg);
-
+    
     animation-name: text-anim;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     z-index: 3;
 }
 
-@keyframes star-anim {
+.ms_easter-egg {
+    text-align: center;
+}
 
+.ms_easter-egg i  {
+cursor: pointer;
+}
+
+.ms_easter-egg .ms_captain-fizz {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ms_easter-egg .ms_captain-fizz audio {
+    border-radius: 10px;
+}
+
+/* ANIMATIONS */
+
+@keyframes star-anim {
+    
     0% {
         transform: translate(-50%, -50%)rotate(0deg);
     }
-
+    
     100% {
         transform: translate(-50%, -50%)rotate(360deg);
     }
 }
 
 @keyframes text-anim {
-
+    
     0% {
         transform: rotate(-45deg)scale(1);
     }
-
+    
     50% {
         transform: rotate(-55deg)scale(0.7);
     }
